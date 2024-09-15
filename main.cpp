@@ -1,3 +1,6 @@
+/* Platon Lukyanov st128133@student.spbu.ru
+ * Problem 1
+*/
 #include <iostream>
 #include <string>
 #include "hello.h"

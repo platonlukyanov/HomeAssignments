@@ -63,3 +63,6 @@ Release/
 # Ignore all files in the following directories
 *.DS_Store
 *.Thumbs.db
+
+# Project specific
+./main
