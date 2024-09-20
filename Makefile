@@ -1,15 +1,19 @@
-all: main
+IDIR=.
+CXX=g++
+CXXFLAGS=-I$(IDIR)
+OBJECT_FILES=main.o hello.o 
+PROJECT=main
+DEPS=hello.h
+all: $(PROJECT);
+default: all;
 
-main.o: main.cpp hello.h # Сборка объектного файла main.o из main.cpp
-	g++ -c main.cpp
-hello.o: hello.cpp hello.h # Сборка объектного файла hello.o из hello.cpp
-	g++ -c hello.cpp
-
-main: main.o hello.o # Линковка
-	g++ -Wall -o main main.o hello.o
+%.o: %.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+$(PROJECT): $(OBJECT_FILES) # Линковка
+	$(CXX) -o $@ $^ $(CXXFLAGS)
 clean:
-	rm -f main *.o
-.PHONY: clean main
+	rm -f $(PROJECT) *.o
+.PHONY: clean $(PROJECT)
 
 ## Хороший makefile. Но будь твой проект больше, было бы жутко муторно все это
 ## писать. Есть варианты поудобнее, которые можно вставить в почти любой проект
