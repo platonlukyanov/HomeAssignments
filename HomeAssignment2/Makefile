@@ -1,9 +1,9 @@
 IDIR=.
 CXX=g++
 CXXFLAGS=-I$(IDIR)
-OBJECT_FILES=main.o fileReader.o 
+OBJECT_FILES=main.o filesystemUtils.o 
 PROJECT=main
-DEPS=fileReader.h
+DEPS=filesystemUtils.h
 all: $(PROJECT);
 default: all;
 
@@ -12,5 +12,5 @@ default: all;
 $(PROJECT): $(OBJECT_FILES) # Линковка
 	$(CXX) -o $@ $^ $(CXXFLAGS)
 clean:
-	rm -f $(PROJECT) *.o
+	rm -f $(PROJECT) *.o target.txt
 .PHONY: clean $(PROJECT)
