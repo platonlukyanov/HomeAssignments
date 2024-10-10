@@ -7,9 +7,13 @@
 #include <algorithm>
 #include <cstring>
 
-int main() {
-    std::string source = "source.txt";
-    std::string target = "target.txt";    
+int main(int argc, char *argv[]) {
+    if (argc == 1) {
+        std::cout << "Please, specify source and target files: ./main <source> <target>\n";
+        return 1;
+    }
+    std::string source = argv[1];
+    std::string target = argv[2];
     char* charachters = readFromFileIntoChars(source);
 
     std::cout << charachters << '\n';
