@@ -1,4 +1,4 @@
-# Задача №2
+# Задача №2a
 
 Лукьянов Платон Александрович; Б81
 email: platon_lukyanov@vk.com
@@ -13,5 +13,5 @@ make
 ## Запуск
 ```bash
 ./main <source_file> <target_file>
-```,
+```
 где `source_file` - файл, который нужно развернуть, `target_file` - куда записать результат
