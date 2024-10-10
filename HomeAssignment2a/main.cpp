@@ -1,5 +1,5 @@
 /* Platon Lukyanov st128133@student.spbu.ru
- * Problem 1
+ * Problem 2a
 */
 #include <iostream>
 #include "filesystemUtils.h"

@@ -1,3 +1,6 @@
+/* Platon Lukyanov st128133@student.spbu.ru
+ * Problem 2a
+*/
 #ifndef FILEREADER_H
 #define FILEREADER_H 
 #include <string>

@@ -12,8 +12,6 @@ make
 
 ## Запуск
 ```bash
-./main
-```
-
-## Использование
-TODO
+./main <source_file> <target_file>
+```,
+где `source_file` - файл, который нужно развернуть, `target_file` - куда записать результат

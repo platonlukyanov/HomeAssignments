@@ -1,3 +1,6 @@
+/* Platon Lukyanov st128133@student.spbu.ru
+ * Problem 2a
+*/
 #include <filesystemUtils.h>
 #include <fstream>
 #include <filesystem>
