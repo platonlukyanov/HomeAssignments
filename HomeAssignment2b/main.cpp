@@ -42,11 +42,11 @@ class Stack {
 };
 
 int main(int argc, char *argv[]) {
-    int number_of_operations = std::stoi(argv[1]);
+    int numberOfOperations = std::stoi(argv[1]);
     Stack<int> stack(2); // we won't need more than 2 elements on stack for binary operations
     std::string userInput;
 
-    for (int i = 0; i < number_of_operations; i++) {
+    for (int i = 0; i < numberOfOperations; i++) {
         std::cin >> userInput;
         if (userInput == "+") {
             stack.push(stack.pop() + stack.pop());
