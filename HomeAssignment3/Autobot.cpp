@@ -1,32 +1,31 @@
+/* Platon Lukyanov st128133@student.spbu.ru
+ * Problem 3
+ */
 #include "Autobot.h"
 
-#include "Transformer.h"
+Autobot::Autobot(AutobotConfig config)
+    : Transformer(config),
+      _motto(config.motto),
+      _haveMatrixOfLeadership(config.haveMatrixOfLeadership) {
+}
 
-class Autobot : public Transformer {
-    public:
-        Autobot(AutobotConfig config)
-            : Transformer(config),
-              _motto(config.motto),
-              _haveMatrixOfLeadership(config.haveMatrixOfLeadership) {
-        }
-        void shantMotto() {
-            std::cout << "Shanting " << _motto << "\n";
-            accessMemory()->logAction("Shanting!");
-        }
-        std::string getMotto() {
-            return _motto;
-        }
-        void setMotto(std::string motto) {
-            _motto = motto;
-        }
-        bool haveMatrixOfLeadership() {
-            return _haveMatrixOfLeadership;
-        }
-        void setHaveMatrixOfLeadership(bool haveMatrixOfLeadership) {
-            _haveMatrixOfLeadership = haveMatrixOfLeadership;
-        }
+void Autobot::shantMotto() {
+    std::cout << "Shanting " << _motto << "\n";
+    accessMemory()->logAction("Shanting!");
+}
 
-    private:
-        std::string _motto;
-        bool _haveMatrixOfLeadership;
-};
+std::string Autobot::getMotto() {
+    return _motto;
+}
+
+void Autobot::setMotto(std::string motto) {
+    _motto = motto;
+}
+
+bool Autobot::haveMatrixOfLeadership() {
+    return _haveMatrixOfLeadership;
+}
+
+void Autobot::setHaveMatrixOfLeadership(bool haveMatrixOfLeadership) {
+    _haveMatrixOfLeadership = haveMatrixOfLeadership;
+}

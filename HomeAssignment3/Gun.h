@@ -1,3 +1,6 @@
+/* Platon Lukyanov st128133@student.spbu.ru
+ * Problem 3
+ */
 #ifndef GUN_H
 #define GUN_H
 

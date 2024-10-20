@@ -1,3 +1,6 @@
+/* Platon Lukyanov st128133@student.spbu.ru
+ * Problem 3
+ */
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
 
@@ -9,8 +12,8 @@
 
 struct TransformerConfig {
         const std::string transformationResult;
-        const int woundLevel = 0;
         const int ageInYears;
+        const int woundLevel = 0;
 };
 
 class Transformer {
@@ -20,12 +23,13 @@ class Transformer {
         void fire();
         void increaseAge();
 
-        std::string getTransformationResult();
-        int getAgeInYears();
-        int getHealth();
+        std::string getTransformationResult() const;
+        int getAgeInYears() const;
+        int getHealth() const;
+        Gun* getCurrentGun() const;
 
-        int setHealth(int newHealthValue);
-        int setGun(Gun* gun);
+        void setHealth(int newHealthValue);
+        void setGun(Gun* gun);
 
         ~Transformer();
 

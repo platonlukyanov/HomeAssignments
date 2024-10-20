@@ -5,14 +5,15 @@ email: platon_lukyanov@vk.com
 
 ## Сборка
 Требования: g++, make
-Для сборки нужно запустить:
+А также `sudo apt-get install libgtest-dev build-essential clang-format` для dev-окружения
+
+## Запуск тестов
 ```bash
-make
+make test
 ```
 
-## Запуск
+## Запуск форматера
 ```bash
-./main
+make format
 ```
 
-## Использование

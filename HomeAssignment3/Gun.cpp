@@ -1,8 +1,12 @@
+/* Platon Lukyanov st128133@student.spbu.ru
+ * Problem 3
+ */
 #include "Gun.h"
 
 #include <iostream>
 
-Gun::Gun(std::string name) : _name(name), _load(100) {}
+Gun::Gun(std::string name) : _name(name), _load(100) {
+}
 
 void Gun::strike() {
     if (_load <= 0) {

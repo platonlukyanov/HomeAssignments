@@ -1,3 +1,6 @@
+/* Platon Lukyanov st128133@student.spbu.ru
+ * Problem 3
+ */
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
 
