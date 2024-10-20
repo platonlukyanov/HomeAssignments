@@ -8,9 +8,9 @@
 #include "TransformerMemory.h"
 
 struct TransformerConfig {
-    const std::string transformationResult;
-    const int woundLevel = 0;
-    const int ageInYears;
+        const std::string transformationResult;
+        const int woundLevel = 0;
+        const int ageInYears;
 };
 
 class Transformer {

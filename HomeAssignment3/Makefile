@@ -13,4 +13,6 @@ $(PROJECT): $(OBJECT_FILES) # Линковка
 	$(CXX) -o $@ $^ $(CXXFLAGS)
 clean:
 	rm -f $(PROJECT) *.o
-.PHONY: clean $(PROJECT)
+format:
+	find . \( -name '*.cpp' -o -name '*.h' \) -exec clang-format -i {} \;
+.PHONY: clean format $(PROJECT)
