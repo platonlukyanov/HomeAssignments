@@ -35,5 +35,7 @@ class Transformer {
         TransformerMemory* _memory;
         Gun* _gun = nullptr;
         static const int TRANSFORMATION_HEALTH_LIMIT = 10;
+    protected:
+        TransformerMemory* accessMemory();
 };
 #endif // TRANSFORMER_H

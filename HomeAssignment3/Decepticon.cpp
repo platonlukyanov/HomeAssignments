@@ -9,6 +9,7 @@ class Decepticon: public Transformer {
               _canLandOnWater(config.canLandOnWater) {}
         void fly() {
             std::cout << "Flying into the sky!\n";
+            accessMemory()->logAction("Flying");
         }
         int getFlyingRange() {
             return _flyingRange;
