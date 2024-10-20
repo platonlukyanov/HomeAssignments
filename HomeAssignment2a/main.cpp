@@ -3,7 +3,6 @@
 */
 #include <iostream>
 #include "filesystemUtils.h"
-#include <string>
 #include <algorithm>
 #include <cstring>
 

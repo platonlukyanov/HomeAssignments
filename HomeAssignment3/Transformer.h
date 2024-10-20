@@ -44,4 +44,4 @@ class Transformer {
     protected:
         TransformerMemory* accessMemory();
 };
-#endif  // TRANSFORMER_H
+#endif

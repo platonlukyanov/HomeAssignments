@@ -6,7 +6,7 @@
 #include "hello.h"
 
 int main(int argc, char *argv[]) {
-    string userWord = "world";
+    std::string userWord = "world";
 
     do {
 	sayHi(userWord);

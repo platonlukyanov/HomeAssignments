@@ -4,9 +4,6 @@
 #include "hello.h"
 #include <iostream>
 
-/* Пока что вы этого не знаете, но существует несколько методов передачи
- * аргумента в функцию. В этом случае произошло копирование, которое занимает
- * много времени в сравнении с передачей по ссылке */
-void sayHi(string whatToGreet) {
+void sayHi(std::string& whatToGreet) {
      std::cout << "Hello, " << whatToGreet << "!\n"; 
 }

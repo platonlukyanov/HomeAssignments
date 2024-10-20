@@ -4,7 +4,6 @@
 #include <filesystemUtils.h>
 #include <fstream>
 #include <filesystem>
-#include <string>
 #include <cstring>
 
 char* readFromFileIntoChars(std::string& filename) {
