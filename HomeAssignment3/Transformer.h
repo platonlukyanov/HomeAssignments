@@ -1,8 +1,9 @@
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
 
-#include <string>
 #include <iostream>
+#include <string>
+
 #include "Gun.h"
 #include "TransformerMemory.h"
 
@@ -18,14 +19,14 @@ class Transformer {
         void transform();
         void fire();
         void increaseAge();
-        
+
         std::string getTransformationResult();
         int getAgeInYears();
         int getHealth();
-        
+
         int setHealth(int newHealthValue);
-        int setGun(Gun *gun);
-        
+        int setGun(Gun* gun);
+
         ~Transformer();
 
     private:
@@ -35,7 +36,8 @@ class Transformer {
         TransformerMemory* _memory;
         Gun* _gun = nullptr;
         static const int TRANSFORMATION_HEALTH_LIMIT = 10;
+
     protected:
         TransformerMemory* accessMemory();
 };
-#endif // TRANSFORMER_H
+#endif  // TRANSFORMER_H

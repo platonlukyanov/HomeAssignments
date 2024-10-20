@@ -1,4 +1,5 @@
 #include "Gun.h"
+
 #include <iostream>
 
 class Gun {
@@ -17,8 +18,8 @@ class Gun {
         std::string getName() {
             return _name;
         }
+
     private:
         std::string _name;
         int _load;
 };
-

@@ -11,4 +11,3 @@ class TransformerMemory {
         int _index = 0;
         std::string *_log;
 };
-

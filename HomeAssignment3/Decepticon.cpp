@@ -1,12 +1,14 @@
-#include "Transformer.h"
 #include "Decepticon.h"
 
-class Decepticon: public Transformer {
-   public:
+#include "Transformer.h"
+
+class Decepticon : public Transformer {
+    public:
         Decepticon(DecepticonConfig config)
             : Transformer(config),
-              _flyingRange(config.flyingRange), 
-              _canLandOnWater(config.canLandOnWater) {}
+              _flyingRange(config.flyingRange),
+              _canLandOnWater(config.canLandOnWater) {
+        }
         void fly() {
             std::cout << "Flying into the sky!\n";
             accessMemory()->logAction("Flying");
@@ -23,6 +25,7 @@ class Decepticon: public Transformer {
         int setCanLandOnWater(bool canLandOnWater) {
             _canLandOnWater = canLandOnWater;
         }
+
     private:
         int _flyingRange;
         bool _canLandOnWater;

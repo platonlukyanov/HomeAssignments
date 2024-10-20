@@ -11,10 +11,10 @@ class Transformer {
         void transform() {
             if (this->getHealth() < TRANSFORMATION_HEALTH_LIMIT) {
                 std::cerr << "Unable to transform. Health is too low\n"
-                            << "It should be above " 
-                            << TRANSFORMATION_HEALTH_LIMIT << "\n";
-                return; 
-            } 
+                          << "It should be above "
+                          << TRANSFORMATION_HEALTH_LIMIT << "\n";
+                return;
+            }
             std::cout << "Transforming into: " << _transformationResult << "\n";
             _memory->logAction("Transformed");
         }
@@ -42,12 +42,13 @@ class Transformer {
         int setHealth(int newHealthValue) {
             _health = newHealthValue;
         }
-        int setGun(Gun *gun) {
-           _gun = gun; 
+        int setGun(Gun* gun) {
+            _gun = gun;
         }
         ~Transformer() {
             delete _memory;
         }
+
     private:
         int _health;
         std::string _transformationResult;
@@ -55,6 +56,7 @@ class Transformer {
         TransformerMemory* _memory;
         Gun* _gun = nullptr;
         static const int TRANSFORMATION_HEALTH_LIMIT = 10;
+
     protected:
         TransformerMemory* accessMemory() {
             return _memory;
