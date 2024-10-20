@@ -5,9 +5,11 @@ LDFLAGS=-lgtest -lgtest_main -lpthread
 OBJECT_FILES=main.o
 PROJECT=main
 DEPS=Gun.h
-TEST_FILES=$(wildcard test-*.cpp) # Automatically find all test files
+# Specify the tests directory
+TEST_DIR=tests
+TEST_FILES=$(wildcard $(TEST_DIR)/test-*.cpp) # Find all test files in the tests folder
 TEST_OBJECTS=$(TEST_FILES:.cpp=.o) Gun.o # Change .cpp to .o for test objects
-all: $(PROJECT);
+ll: $(PROJECT);
 default: all;
 
 %.o: %.cpp $(DEPS)
@@ -15,7 +17,7 @@ default: all;
 $(PROJECT): $(OBJECT_FILES) # Линковка
 	$(CXX) -o $@ $^ $(CXXFLAGS)
 clean:
-	rm -f $(PROJECT) *.o
+	rm -f $(PROJECT) $(TEST_DIR)/*.o *.o
 format:
 	find . \( -name '*.cpp' -o -name '*.h' \) -exec clang-format -i {} \;
 
@@ -26,6 +28,6 @@ test: $(TEST_OBJECTS)
 	rm ./run_tests
 
 # Rule to compile test files
-test-%.o: test-%.cpp $(DEPS)
+$(TEST_DIR)/test-%.o: $(TEST_DIR)/test-%.cpp $(DEPS)
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
 .PHONY: clean format $(PROJECT)
