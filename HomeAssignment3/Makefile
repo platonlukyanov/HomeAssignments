@@ -13,12 +13,13 @@ default: all;
 
 %.o: %.cpp $(DEPS)
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
-$(PROJECT): $(OBJECT_FILES) # Линковка
-	$(CXX) -o $@ $^ $(CXXFLAGS)
 clean:
 	rm -f $(PROJECT) $(TEST_DIR)/*.o *.o
 format:
 	find . \( -name '*.cpp' -o -name '*.h' \) -exec clang-format -i {} \;
+$(PROJECT):
+	@echo 'This project contains only test code. To run test suits, use "make test"';
+
 
 test: $(TEST_OBJECTS)
 	$(CXX) -o run_tests $^ $(LDFLAGS)
