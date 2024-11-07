@@ -26,6 +26,7 @@ class Autobot : public Transformer {
         friend std::ostream& operator<<(std::ostream& os, const Autobot& obj);
         bool operator>(const Autobot& other) const;
         bool operator<(const Autobot& other) const;
+
     private:
         std::string _motto;
         bool _haveMatrixOfLeadership;

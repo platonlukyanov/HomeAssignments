@@ -4,12 +4,12 @@
 #include "Minicon.h"
 
 Minicon::Minicon(Transformer* bearer)
-    : Transformer(MiniconConfig({})),
-    _heightInMeters(1) {};
+    : Transformer(MiniconConfig({})), _heightInMeters(1){};
 
 Minicon::Minicon(MiniconConfig config)
     : Transformer(config),
-      _heightInMeters(config.heightInMeters), _bearer(nullptr) {};
+      _heightInMeters(config.heightInMeters),
+      _bearer(nullptr){};
 
 void Minicon::setHeightInMeters(int height) {
     _heightInMeters = height;
@@ -29,7 +29,9 @@ Transformer* Minicon::getCurrentBearer() const {
 }
 
 std::ostream& operator<<(std::ostream& os, const Minicon& minicon) {
-    os << "Minicon, " << minicon.getAgeInYears() << " y.o, with" << minicon.getCurrentGun()->getName() << ", height: " << minicon.getHeightInMeters() << "\n";
+    os << "Minicon, " << minicon.getAgeInYears() << " y.o, with"
+       << minicon.getCurrentGun()->getName()
+       << ", height: " << minicon.getHeightInMeters() << "\n";
     return os;
 }
 

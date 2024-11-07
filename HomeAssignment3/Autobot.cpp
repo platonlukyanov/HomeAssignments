@@ -10,9 +10,7 @@ Autobot::Autobot(AutobotConfig config)
 }
 
 Autobot::Autobot(std::string& motto)
-    : Transformer({}),
-      _motto(motto),
-      _haveMatrixOfLeadership(false) {
+    : Transformer({}), _motto(motto), _haveMatrixOfLeadership(false) {
 }
 
 void Autobot::shantMotto() {
@@ -36,7 +34,8 @@ void Autobot::setHaveMatrixOfLeadership(bool haveMatrixOfLeadership) {
     _haveMatrixOfLeadership = haveMatrixOfLeadership;
 }
 std::ostream& operator<<(std::ostream& os, const Autobot& autobot) {
-    os << "Autobot, " << autobot.getAgeInYears() << " y.o, with" << autobot.getCurrentGun()->getName() << "\n";
+    os << "Autobot, " << autobot.getAgeInYears() << " y.o, with"
+       << autobot.getCurrentGun()->getName() << "\n";
     return os;
 }
 

@@ -10,7 +10,7 @@
 #include "Transformer.h"
 
 struct MiniconConfig : public TransformerConfig {
-    int const heightInMeters;
+        int const heightInMeters;
 };
 
 class Minicon : public Transformer {
@@ -21,10 +21,10 @@ class Minicon : public Transformer {
         void setHeightInMeters(int height);
         Transformer* getCurrentBearer() const;
         void connectTransformer(Transformer* transformer);
-        friend std::ostream& operator<<(std::ostream& os, const Minicon& minicon);
+        friend std::ostream& operator<<(std::ostream& os,
+                                        const Minicon& minicon);
         bool operator>(const Minicon& other) const;
         bool operator<(const Minicon& other) const;
-
 
     private:
         int _heightInMeters;

@@ -5,9 +5,9 @@
 
 Decepticon::Decepticon()
     : Transformer(DecepticonConfig({})),
-    _flyingRange(0),
-    _canLandOnWater(false)
-{}
+      _flyingRange(0),
+      _canLandOnWater(false) {
+}
 
 Decepticon::Decepticon(DecepticonConfig config)
     : Transformer(config),
@@ -37,7 +37,9 @@ void Decepticon::setCanLandOnWater(bool canLandOnWater) {
 }
 
 std::ostream& operator<<(std::ostream& os, const Decepticon& decepticon) {
-    os << "Decepticon, " << decepticon.getAgeInYears() << " y.o, with" << decepticon.getCurrentGun()->getName() << " that can fly up to " << decepticon._flyingRange << "\n";
+    os << "Decepticon, " << decepticon.getAgeInYears() << " y.o, with"
+       << decepticon.getCurrentGun()->getName() << " that can fly up to "
+       << decepticon._flyingRange << "\n";
     return os;
 }
 

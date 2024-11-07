@@ -19,7 +19,8 @@ class Decepticon : public Transformer {
         void setFlyingRange(int flyingRange);
         bool canLandOnWater();
         void setCanLandOnWater(bool canLandOnWater);
-        friend std::ostream& operator<<(std::ostream& os, const Decepticon& decepticon);
+        friend std::ostream& operator<<(std::ostream& os,
+                                        const Decepticon& decepticon);
         bool operator>(const Decepticon& other) const;
         bool operator<(const Decepticon& other) const;
 

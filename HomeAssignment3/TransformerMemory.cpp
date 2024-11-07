@@ -1,7 +1,9 @@
 #include "TransformerMemory.h"
+
 #include <iostream>
 
-TransformerMemory::TransformerMemory(int capacity) : _capacity(capacity), _index(0) {
+TransformerMemory::TransformerMemory(int capacity)
+    : _capacity(capacity), _index(0) {
     _log = new std::string[capacity];
 }
 
