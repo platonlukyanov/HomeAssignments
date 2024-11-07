@@ -29,3 +29,16 @@ bool Decepticon::canLandOnWater() {
 void Decepticon::setCanLandOnWater(bool canLandOnWater) {
     _canLandOnWater = canLandOnWater;
 }
+
+std::ostream& operator<<(std::ostream& os, const Decepticon& decepticon) {
+    os << "Decepticon, " << decepticon.getAgeInYears() << " y.o, with" << decepticon.getCurrentGun()->getName() << " that can fly up to " << decepticon._flyingRange << "\n";
+    return os;
+}
+
+bool Decepticon::operator>(const Decepticon& other) const {
+    return other.getHealth() > this->getHealth();
+}
+
+bool Decepticon::operator<(const Decepticon& other) const {
+    return other.getHealth() < this->getHealth();
+}

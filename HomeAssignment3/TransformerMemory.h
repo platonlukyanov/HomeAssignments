@@ -13,6 +13,7 @@ class TransformerMemory {
         ~TransformerMemory();
 
     private:
+        int _capacity;
         int _index = 0;
         std::string* _log;
 };

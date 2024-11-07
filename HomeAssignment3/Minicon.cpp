@@ -23,3 +23,16 @@ void Minicon::connectTransformer(Transformer* transformer) {
 Transformer* Minicon::getCurrentBearer() const {
     return _bearer;
 }
+
+std::ostream& operator<<(std::ostream& os, const Minicon& minicon) {
+    os << "Minicon, " << minicon.getAgeInYears() << " y.o, with" << minicon.getCurrentGun()->getName() << ", height: " << minicon.getHeightInMeters() << "\n";
+    return os;
+}
+
+bool Minicon::operator>(const Minicon& other) const {
+    return other.getHealth() > this->getHealth();
+}
+
+bool Minicon::operator<(const Minicon& other) const {
+    return other.getHealth() < this->getHealth();
+}

@@ -22,7 +22,9 @@ class Autobot : public Transformer {
         void setMotto(std::string motto);
         bool haveMatrixOfLeadership();
         void setHaveMatrixOfLeadership(bool haveMatrixOfLeadership);
-
+        friend std::ostream& operator<<(std::ostream& os, const Autobot& obj);
+        bool operator>(const Autobot& other) const;
+        bool operator<(const Autobot& other) const;
     private:
         std::string _motto;
         bool _haveMatrixOfLeadership;

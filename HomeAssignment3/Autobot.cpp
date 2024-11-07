@@ -29,3 +29,15 @@ bool Autobot::haveMatrixOfLeadership() {
 void Autobot::setHaveMatrixOfLeadership(bool haveMatrixOfLeadership) {
     _haveMatrixOfLeadership = haveMatrixOfLeadership;
 }
+std::ostream& operator<<(std::ostream& os, const Autobot& autobot) {
+    os << "Autobot, " << autobot.getAgeInYears() << " y.o, with" << autobot.getCurrentGun()->getName() << "\n";
+    return os;
+}
+
+bool Autobot::operator>(const Autobot& other) const {
+    return other.getHealth() > this->getHealth();
+}
+
+bool Autobot::operator<(const Autobot& other) const {
+    return other.getHealth() < this->getHealth();
+}

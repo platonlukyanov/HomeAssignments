@@ -20,9 +20,13 @@ class Minicon : public Transformer {
         void setHeightInMeters(int height);
         Transformer* getCurrentBearer() const;
         void connectTransformer(Transformer* transformer);
+        friend std::ostream& operator<<(std::ostream& os, const Minicon& minicon);
+        bool operator>(const Minicon& other) const;
+        bool operator<(const Minicon& other) const;
+
 
     private:
-        Transformer* _bearer;
         int _heightInMeters;
+        Transformer* _bearer;
 };
 #endif

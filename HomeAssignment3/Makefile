@@ -1,6 +1,6 @@
 IDIR=.
 CXX=g++
-CXXFLAGS=-I$(IDIR)
+CXXFLAGS=-I$(IDIR) -Wall -Wpedantic -Werror
 LDFLAGS=-lgtest -lgtest_main -lpthread
 OBJECT_FILES=Transformer.o TransformerMemory.o Gun.o Autobot.o Decepticon.o Minicon.o
 PROJECT=main

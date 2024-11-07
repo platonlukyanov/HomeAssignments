@@ -21,3 +21,18 @@ TEST(Minicon, can_become_connected_to_transformer) {
     minicon.connectTransformer(&transformer);
     ASSERT_EQ(minicon.getCurrentBearer()->getTransformationResult(), "Truck");
 }
+
+TEST(Minicon, can_be_weaker) {
+    MiniconConfig config = {"Aircraft", 30, 0, 100};
+    Minicon minicon1(config);
+    MiniconConfig config2 = {"Aircraft", 20, 0, 100};
+    Minicon minicon2(config2);
+    ASSERT_GT(minicon2, minicon1);
+}
+TEST(Minicon, can_be_stronger) {
+    MiniconConfig config = {"Aircraft", 10, 0, 100};
+    Minicon minicon1(config);
+    MiniconConfig config2 = {"Aircraft", 20, 0, 100};
+    Minicon minicon2(config2);
+    ASSERT_GT(minicon1, minicon2);
+}

@@ -1,16 +1,12 @@
-/* Platon Lukyanov st128133@student.spbu.ru
- * Problem 3
- */
 #include "TransformerMemory.h"
-
 #include <iostream>
 
-TransformerMemory::TransformerMemory(int capacity) {
+TransformerMemory::TransformerMemory(int capacity) : _capacity(capacity), _index(0) {
     _log = new std::string[capacity];
 }
 
 void TransformerMemory::logAction(const std::string& action) {
-    if (_index < sizeof(_log) / sizeof(_log[0])) {
+    if (_index < _capacity) {  // Use _capacity instead
         _log[_index++] = action;
     } else {
         std::cerr << "Log capacity exceeded\n";
