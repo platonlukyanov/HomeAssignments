@@ -3,6 +3,10 @@
  */
 #include "Minicon.h"
 
+Minicon::Minicon(Transformer* bearer)
+    : Transformer(MiniconConfig({})),
+    _heightInMeters(1) {};
+
 Minicon::Minicon(MiniconConfig config)
     : Transformer(config),
       _heightInMeters(config.heightInMeters), _bearer(nullptr) {};

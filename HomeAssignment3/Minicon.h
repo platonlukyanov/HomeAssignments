@@ -16,6 +16,7 @@ struct MiniconConfig : public TransformerConfig {
 class Minicon : public Transformer {
     public:
         Minicon(MiniconConfig config);
+        Minicon(Transformer* bearer);
         int getHeightInMeters() const;
         void setHeightInMeters(int height);
         Transformer* getCurrentBearer() const;

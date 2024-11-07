@@ -12,6 +12,7 @@ struct DecepticonConfig : public TransformerConfig {
 
 class Decepticon : public Transformer {
     public:
+        Decepticon();
         Decepticon(DecepticonConfig config);
         void fly();
         int getFlyingRange();

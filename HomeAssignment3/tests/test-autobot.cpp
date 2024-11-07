@@ -33,3 +33,8 @@ TEST(Autobot, can_be_stronger) {
     Autobot autobot2(config2);
     ASSERT_GT(autobot2, autobot1);
 }
+TEST(Autobot, can_instance_without_config) {
+    std::string motto = "I am minimal";
+    Autobot autobot(motto);
+    ASSERT_EQ(autobot.getMotto(), motto);
+}

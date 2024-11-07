@@ -17,6 +17,7 @@ struct AutobotConfig : public TransformerConfig {
 class Autobot : public Transformer {
     public:
         Autobot(AutobotConfig config);
+        Autobot(std::string& motto);
         void shantMotto();
         std::string getMotto();
         void setMotto(std::string motto);

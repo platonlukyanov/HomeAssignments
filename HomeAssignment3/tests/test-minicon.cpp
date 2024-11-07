@@ -36,3 +36,11 @@ TEST(Minicon, can_be_stronger) {
     Minicon minicon2(config2);
     ASSERT_GT(minicon1, minicon2);
 }
+TEST(Minicon, can_be_initiated_without_args) {
+    TransformerConfig transformerConfig = {"Truck", 1000};
+    Transformer transformer(transformerConfig);
+
+    Minicon minicon(&transformer);
+
+    ASSERT_EQ(minicon.getCurrentBearer()->getTransformationResult(), "Truck");
+}

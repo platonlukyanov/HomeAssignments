@@ -30,3 +30,7 @@ TEST(Decepticon, can_be_stronger) {
     Decepticon decepticon2(config2);
     ASSERT_GT(decepticon1, decepticon2);
 }
+TEST(Decepticon, can_be_initiated_without_arguments) {
+    Decepticon decepticon;
+    ASSERT_EQ(decepticon.getFlyingRange(), 0);
+}

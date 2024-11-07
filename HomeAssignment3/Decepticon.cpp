@@ -3,6 +3,12 @@
  */
 #include "Decepticon.h"
 
+Decepticon::Decepticon()
+    : Transformer(DecepticonConfig({})),
+    _flyingRange(0),
+    _canLandOnWater(false)
+{}
+
 Decepticon::Decepticon(DecepticonConfig config)
     : Transformer(config),
       _flyingRange(config.flyingRange),

@@ -9,6 +9,12 @@ Autobot::Autobot(AutobotConfig config)
       _haveMatrixOfLeadership(config.haveMatrixOfLeadership) {
 }
 
+Autobot::Autobot(std::string& motto)
+    : Transformer({}),
+      _motto(motto),
+      _haveMatrixOfLeadership(false) {
+}
+
 void Autobot::shantMotto() {
     std::cout << "Shanting " << _motto << "\n";
     accessMemory()->logAction("Shanting!");
