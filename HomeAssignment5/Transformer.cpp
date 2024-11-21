@@ -1,5 +1,5 @@
 /* Platon Lukyanov st128133@student.spbu.ru
- * Problem 5
+ * Problem 3
  */
 #include "Transformer.h"
 
@@ -11,14 +11,15 @@ Transformer::Transformer(TransformerConfig config) {
 }
 
 void Transformer::transform() {
-    if (this->getHealth() < TRANSFORMATION_HEALTH_LIMIT) {
-        std::cerr << "Unable to transform. Health is too low\n"
-                  << "It should be above " << TRANSFORMATION_HEALTH_LIMIT
-                  << "\n";
-        return;
-    }
-    std::cout << "Transforming into: " << _transformationResult << "\n";
-    _memory->logAction("Transformed");
+    std::cout << "Transformer, transform\n";
+}
+
+void Transformer::ulta() {
+    std::cout << "Transformer, ulta\n";
+}
+
+void Transformer::openFire() {
+    std::cout << "Transformer, openFire\n";
 }
 
 void Transformer::fire() {

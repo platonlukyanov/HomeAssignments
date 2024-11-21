@@ -1,5 +1,5 @@
 /* Platon Lukyanov st128133@student.spbu.ru
- * Problem 5
+ * Problem 3
  */
 #include "Decepticon.h"
 
@@ -14,6 +14,19 @@ Decepticon::Decepticon(DecepticonConfig config)
       _flyingRange(config.flyingRange),
       _canLandOnWater(config.canLandOnWater) {
 }
+
+void Decepticon::transform() {
+    std::cout << "Decepticon, transform\n";
+}
+
+void Decepticon::ulta() {
+    std::cout << "Decepticon, ulta\n";
+}
+
+void Decepticon::openFire() {
+    std::cout << "Decepticon, openFire\n";
+}
+
 
 void Decepticon::fly() {
     std::cout << "Flying into the sky!\n";
@@ -44,9 +57,9 @@ std::ostream& operator<<(std::ostream& os, const Decepticon& decepticon) {
 }
 
 bool Decepticon::operator>(const Decepticon& other) const {
-    return other.getHealth() > this->getHealth();
+    return other.getHealth() < this->getHealth();
 }
 
 bool Decepticon::operator<(const Decepticon& other) const {
-    return other.getHealth() < this->getHealth();
+    return other.getHealth() > this->getHealth();
 }

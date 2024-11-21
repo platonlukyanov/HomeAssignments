@@ -1,5 +1,5 @@
 /* Platon Lukyanov st128133@student.spbu.ru
- * Problem 5
+ * Problem 3
  */
 #ifndef MINICON_H
 #define MINICON_H

@@ -1,5 +1,5 @@
 /* Platon Lukyanov st128133@student.spbu.ru
- * Problem 5
+ * Problem 3
  */
 #include "Transformer.h"
 #include "gtest/gtest.h"
@@ -44,4 +44,15 @@ TEST(Transformer, can_transform) {
     TransformerConfig config = {"Car", 10};
     Transformer transformer(config);
     transformer.transform();
+}
+TEST(Transformer, can_open_fire) {
+    TransformerConfig config = {"Car", 10};
+    Transformer transformer(config);
+    transformer.openFire();
+}
+
+TEST(Transformer, can_ulta) {
+    TransformerConfig config = {"Car", 10};
+    Transformer transformer(config);
+    transformer.ulta();
 }

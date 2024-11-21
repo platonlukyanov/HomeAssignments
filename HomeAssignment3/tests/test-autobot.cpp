@@ -1,5 +1,5 @@
 /* Platon Lukyanov st128133@student.spbu.ru
- * Problem 3
+ * Problem 5
  */
 #include "Autobot.h"
 #include "gtest/gtest.h"

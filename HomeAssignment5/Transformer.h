@@ -1,5 +1,5 @@
 /* Platon Lukyanov st128133@student.spbu.ru
- * Problem 5
+ * Problem 3
  */
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
@@ -19,7 +19,9 @@ struct TransformerConfig {
 class Transformer {
     public:
         Transformer(TransformerConfig config);
-        void transform();
+        virtual void transform();
+        virtual void openFire();
+        virtual void ulta();
         void fire();
         void increaseAge();
 

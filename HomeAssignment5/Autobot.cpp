@@ -1,5 +1,5 @@
 /* Platon Lukyanov st128133@student.spbu.ru
- * Problem 5
+ * Problem 3
  */
 #include "Autobot.h"
 
@@ -12,6 +12,19 @@ Autobot::Autobot(AutobotConfig config)
 Autobot::Autobot(std::string& motto)
     : Transformer({}), _motto(motto), _haveMatrixOfLeadership(false) {
 }
+
+void Autobot::transform() {
+    std::cout << "Autobot, transform\n";
+}
+
+void Autobot::ulta() {
+    std::cout << "Autobot, ulta\n";
+}
+
+void Autobot::openFire() {
+    std::cout << "Autobot, openFire\n";
+}
+
 
 void Autobot::shantMotto() {
     std::cout << "Shanting " << _motto << "\n";
@@ -40,9 +53,9 @@ std::ostream& operator<<(std::ostream& os, const Autobot& autobot) {
 }
 
 bool Autobot::operator>(const Autobot& other) const {
-    return other.getHealth() > this->getHealth();
+    return other.getHealth() < this->getHealth();
 }
 
 bool Autobot::operator<(const Autobot& other) const {
-    return other.getHealth() < this->getHealth();
+    return other.getHealth() > this->getHealth();
 }
