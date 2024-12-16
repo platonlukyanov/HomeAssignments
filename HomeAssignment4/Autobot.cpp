@@ -40,9 +40,9 @@ std::ostream& operator<<(std::ostream& os, const Autobot& autobot) {
 }
 
 bool Autobot::operator>(const Autobot& other) const {
-    return other.getHealth() > this->getHealth();
+    return other.getHealth() < this->getHealth();
 }
 
 bool Autobot::operator<(const Autobot& other) const {
-    return other.getHealth() < this->getHealth();
+    return other.getHealth() > this->getHealth();
 }

@@ -36,9 +36,9 @@ std::ostream& operator<<(std::ostream& os, const Minicon& minicon) {
 }
 
 bool Minicon::operator>(const Minicon& other) const {
-    return other.getHealth() > this->getHealth();
+    return other.getHealth() < this->getHealth();
 }
 
 bool Minicon::operator<(const Minicon& other) const {
-    return other.getHealth() < this->getHealth();
+    return other.getHealth() > this->getHealth();
 }

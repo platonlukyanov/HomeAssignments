@@ -44,9 +44,9 @@ std::ostream& operator<<(std::ostream& os, const Decepticon& decepticon) {
 }
 
 bool Decepticon::operator>(const Decepticon& other) const {
-    return other.getHealth() > this->getHealth();
+    return other.getHealth() < this->getHealth();
 }
 
 bool Decepticon::operator<(const Decepticon& other) const {
-    return other.getHealth() < this->getHealth();
+    return other.getHealth() > this->getHealth();
 }

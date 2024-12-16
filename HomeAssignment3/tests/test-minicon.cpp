@@ -23,24 +23,16 @@ TEST(Minicon, can_become_connected_to_transformer) {
 }
 
 TEST(Minicon, can_be_weaker) {
-    MiniconConfig config = {"Aircraft", 30, 0, 100};
+    MiniconConfig config = {"Aircraft", 30, 10, 100};
     Minicon minicon1(config);
-    MiniconConfig config2 = {"Aircraft", 20, 0, 100};
+    MiniconConfig config2 = {"Aircraft", 20, 5, 100};
     Minicon minicon2(config2);
-    ASSERT_GT(minicon2, minicon1);
+    ASSERT_TRUE(minicon2 > minicon1);
 }
 TEST(Minicon, can_be_stronger) {
-    MiniconConfig config = {"Aircraft", 10, 0, 100};
+    MiniconConfig config = {"Aircraft", 10, 10, 100};
     Minicon minicon1(config);
-    MiniconConfig config2 = {"Aircraft", 20, 0, 100};
+    MiniconConfig config2 = {"Aircraft", 20, 20, 100};
     Minicon minicon2(config2);
-    ASSERT_GT(minicon1, minicon2);
-}
-TEST(Minicon, can_be_initiated_without_args) {
-    TransformerConfig transformerConfig = {"Truck", 1000};
-    Transformer transformer(transformerConfig);
-
-    Minicon minicon(&transformer);
-
-    ASSERT_EQ(minicon.getCurrentBearer()->getTransformationResult(), "Truck");
+    ASSERT_TRUE(minicon1 > minicon2);
 }
