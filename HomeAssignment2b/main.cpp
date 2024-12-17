@@ -48,6 +48,11 @@ int main(int argc, char *argv[]) {
     }
     int numberOfOperations = std::stoi(argv[1]);
 
+    if (numberOfOperations % 2 != 1) {
+        std::cerr << "Please, enter an odd number of operations (otherwise polish notation does not make sense)\n";
+        return -1;
+    }
+
     Stack<double> stack(2); // we won't need more than 2 elements on stack for binary operations
     std::string userInput;
 
