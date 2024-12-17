@@ -42,7 +42,12 @@ class Stack {
 };
 
 int main(int argc, char *argv[]) {
+    if (!argv[1]) {
+        std::cerr << "Please, enter number of operations\n";
+        return -1;
+    }
     int numberOfOperations = std::stoi(argv[1]);
+
     Stack<double> stack(2); // we won't need more than 2 elements on stack for binary operations
     std::string userInput;
 
